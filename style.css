@@ -81,3 +81,23 @@ a:hover {
 #contact p:last-child {
     margin-top: 3rem;
 }
+
+/* navbar */
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+nav h1 a {
+    font-family: var(--sans);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
