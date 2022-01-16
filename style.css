@@ -88,9 +88,11 @@ nav {
     font-size: 80%;
     padding: 1rem;
 }
+
 nav h1 a {
     font-family: var(--sans);
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -105,11 +107,21 @@ nav li:first-child {
     flex-basis: 100%;
     text-align: center;
 }
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+}
 nav a {
     color: var(--white);
     text-decoration: none;
     display: block;
 }
-nav a:hover {
+
+nav a:hover,
+nav [class*="fa-"]:hover {
     color: var(--magenta);
 }
