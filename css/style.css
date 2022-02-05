@@ -11,16 +11,21 @@
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
 }
+
 /* border box model: https://css-tricks.com/box-sizing/ */
+
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before
 *::after {
     box-sizing: inherit;
 }
+
 /* generic styles for the page */
+
 body {
     padding: 0;
     margin: 0;
@@ -29,6 +34,7 @@ body {
     color: var(--white);
     font-size: var(--font-size);
 }
+
 h1, 
 h2, 
 h3 {
@@ -43,10 +49,20 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 /* background colour divs */
+
 .section-plum {
     background-color: var(--plum);
 }
+
+.section-dkblue {
+    background-color: var(--dkblue);
+}
+
 .gradient {
     background: linear-gradient(90deg, rgba(68,71,77,1) 25%, rgba(182,204,210,1) 100%);
     height: 1px;
@@ -54,6 +70,7 @@ a:hover {
 
 
 /* intro styles */
+
 #intro {
     padding: 4rem 1rem 10rem 1rem;
     max-width: 1200px;
@@ -96,6 +113,7 @@ a:hover {
 }
 
 /* navbar */
+
 nav {
     font-family: var(--mono);
     font-size: 80%;
@@ -138,6 +156,7 @@ nav a:hover,
 nav [class*="fa-"]:hover {
     color: var(--magenta);
 }
+
 .button {
     background-color: var(--magenta);
     color: white;
@@ -151,6 +170,70 @@ nav [class*="fa-"]:hover {
     color: var(--white);
     background-color: var(--hotmag);
 }
+
+/* project section */
+
+#projects {
+    padding: 4rem 1rem;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+    margin: 0;
+}
+#projects h3 {
+    color: var(--aqua);
+}
+
+#projects h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+
+.blackbox {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#projects img {
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--aqua);
+    border-top: 1px solid var(--aqua);
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .text {
+        order: 2;
+        text-align: right;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+}
+
 @media (min-width: 850px) {
     nav {
         max-width: 1200px;
@@ -162,11 +245,14 @@ nav [class*="fa-"]:hover {
         margin-right: auto;
     }
 }
+
 /* footer section */
+
 footer {
     text-align: center;
     padding: 4rem 0;
 }
+
 footer ul {
     list-style-type: none;
     padding: 0;
